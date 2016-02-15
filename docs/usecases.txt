@@ -1,0 +1,29 @@
+three actors - Admin, Creator, Player
+
+Two main success scenarios - 
+1. Creator - Creating a visual novel game using the visual novel engine provided without any issues
+brief description - 
+1. read the startup document how to create the game
+2. create the game by passing the proper inputs such as (text document, images for background and audio files if any neccesary)
+3. succesfully create a visual novel
+
+2. Player - Player playing the game succesfully without any interruptions 
+brief description -
+1. follow the steps how to play
+2. play the game or read the novel
+
+3. Admin - creates the standalone visual novel engine which takes input from the creator and creates the game and also supports if there are 
+any issues in the engine
+breif description -
+1. input syntax
+2. read the syntax and convert the input to proper steps 
+3. using the steps create the game (User interface)
+
+alternate scenarios
+
+Issue while creating a game
+1. Input text file might be corrupted
+2. wrong syntax input
+
+Issue with the game created
+3. Issue with the game designed as incorrect behaviour
