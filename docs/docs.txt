@@ -1,0 +1,9 @@
+Content of this directory:
+
+1. Use cases
+2. Domain model (with conceptual classes and their relationships)
+3. Interaction diagram (SSD or CD)
+4. Design model
+5. Implementation model
+6. ERD (entity-relationship diagram if database used)
+7. User manual
