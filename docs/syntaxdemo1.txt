@@ -1,3 +1,5 @@
+// engine will automatically read next line unless current line is text{} or option{} or pause{}
+
 music{bgm.wav}
 background{bg.bmp} // this replace the background to bg.bmp
 
@@ -6,6 +8,7 @@ text{this is another simple text, the previous text will be replaced}
 text{the engine pause at each line of texts}
 
 image{img.bmp} // this image will be placed on top of background
+pause{} // pause between non text and option line
 backround{bg2.bmp} // this replace the background to bg2.bmp
 
 text{options: }
@@ -16,3 +19,14 @@ image{img2.bmp} // img.bmp will be replaced
 fx{soundfx.wav}
 
 end{}
+
+/*
+music{<filename>}
+fx{<filename>}
+background{<filename>}
+image{<filename>}
+text{<plain text>}
+option{<option 1>; <option 2>; ...}
+pause{}
+end{}
+*/
