@@ -25,8 +25,9 @@ music{<filename>}
 fx{<filename>}
 background{<filename>}
 image{<filename>}
-text{<plain text>}
-option{<option 1>; <option 2>; ...}
+text{<plain text>} // automatic pause{}
+option{<option 1>; <option 2>; ...} // automatic pause{}
+skip{<line>} // for skipping options, should be applied at every end of each content of options.
 pause{}
 end{}
 */
