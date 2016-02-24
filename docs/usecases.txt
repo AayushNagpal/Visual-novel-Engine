@@ -1,29 +1,61 @@
-three actors - Admin, Creator, Player
+Visual Novel Engine -
 
-Two main success scenarios - 
-1. Creator - Creating a visual novel game using the visual novel engine provided without any issues
-brief description - 
-1. read the startup document how to create the game
-2. create the game by passing the proper inputs such as (text document, images for background and audio files if any neccesary)
-3. succesfully create a visual novel
+This engine is used to create Visual Novels which can be used by the mid-term users to create the novels and 
+the final user reads the visual novel game.
 
-2. Player - Player playing the game succesfully without any interruptions 
-brief description -
-1. follow the steps how to play
-2. play the game or read the novel
+Three actors - Admin, Creator, Player
 
-3. Admin - creates the standalone visual novel engine which takes input from the creator and creates the game and also supports if there are 
-any issues in the engine
-breif description -
-1. input syntax
-2. read the syntax and convert the input to proper steps 
-3. using the steps create the game (User interface)
+Success scenarios - 
+	Creater creating a visual novel using the visual novel engine provided without any issues.
 
-alternate scenarios
+Usecase 1 - Reading or Following the User Guide
+Description - User should read the User Guide/Help document to understand how to Create the visual novel or Read the Novel.
+Users Involved - Creator 
+		 Player
 
-Issue while creating a game
-1. Input text file might be corrupted
-2. wrong syntax input
+Usecase 2 - Creating the Visual Novel with only text
+Description - User should pass proper inputs such as (text document, images for background and audio files if any neccesary) to the Visual Novel
+	      Engine. Engine will interpret the input provided and generates the output game file.
+Users Involved - Creator
 
-Issue with the game created
-3. Issue with the game designed as incorrect behaviour
+Usecase 3 - Creating the Visual Novel with only text and background images
+Description - User should pass proper inputs such as (text document, images for background) to the Visual Novel
+	      Engine. Engine will interpret the input provided and generates the output game file.
+Users Involved - Creator
+
+Usecase 4 - Creating the Visual Novel which includes text, background images and audio files
+Description - User should pass proper inputs such as (text document, images for background and audio files if any neccesary) to the Visual Novel
+	      Engine. Engine will interpret the input provided and generates the output game file.
+Users Involved - Creator
+
+Usecase 5 - Reading the Visual Novel
+Description - End user should install the visual novel file in his mobile and read or interact with the visual novel succesfully without any 
+	      interruptions.
+Users Involved - Player
+
+Usecase 6 - Creating the standalone visual novel engine 
+Description - Developer creates a engine which takes input from the creator and creates the visual novel.
+Users Involved - Admin
+
+Usecase 7 - Admin supports if there are any issues in the engine
+Description - Admin supports the Novel engine if any issue raises when the game is created by the developer.
+Users Involved - Admin
+
+
+Alternate scenarios
+
+Usecase 8 - Incorrect input to the Novel engine
+Description - Creator passes incorrect input to the engine.
+Users Involved - Creator & Admin
+
+Usecase 9 - Wrong Syntax passed as an input
+Description - Creator passes wrong syntax which is not supported by the visual novel engine.
+Users Involved - Creator & Admin
+
+Usecase 10 - Issue with the Visual Novel created
+Description - Incorrect behaviour of the visual novel which is created by the User.
+Users Involved - Creator
+
+Usecase 11 - Issue with the Visual Novel created as wrong flow of novel
+Description - Incorrect behaviour of the visual novel which is created by the User.
+Users Involved - Creator
