@@ -9,7 +9,7 @@ import android.os.IBinder;
 public class AudioService extends Service implements MediaPlayer.OnPreparedListener{
 
 	public static MediaPlayer mPlayer;
-	// Binder given to clients
+	// Binder given to Gamecontroller
     private final IBinder ABinder = new AudioBinder();
     
 	@Override
