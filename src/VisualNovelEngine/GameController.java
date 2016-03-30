@@ -1,74 +1,98 @@
-package gamecontroller;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package vnepcport;
+
 import java.util.*;
 import java.io.*;
 
-public class GameController {
-    
-    public static void main(String[] args) {
-        String scriptFileName = "E:/script.txt"; // game script file
-        String scriptLine = null;
-        String scriptHead = null;
-        String scriptContent = null;
-        
-        int beginIdx;
-        int endIdx;
-        
-        try {
-            FileReader fileReader = new FileReader(scriptFileName);
-            BufferedReader bufferedReader = new BufferedReader(fileReader);
-            while((scriptLine = bufferedReader.readLine()) != null) {
-                beginIdx = scriptLine.indexOf("{");
-                endIdx = scriptLine.indexOf("}");
-                scriptHead = scriptLine.substring(0, beginIdx);
-                scriptContent = scriptLine.substring(beginIdx + 1, endIdx);
-                
-                if (scriptHead.compareTo("music") == 0) {
-                    System.out.println("MUSIC");
-                    System.out.println(scriptContent);
-                }
-                if (scriptHead.compareTo("text") == 0) {
-                    System.out.println("TEXT");
-                    System.out.println(scriptContent);
-                }
-                if (scriptHead.compareTo("image") == 0) {
-                    System.out.println("IMAGE");
-                    System.out.println(scriptContent);
-                }
-                if (scriptHead.compareTo("background") == 0) {
-                    System.out.println("BACKGROUND");
-                    System.out.println(scriptContent);
-                }
-                if (scriptHead.compareTo("fx") == 0) {
-                    System.out.println("EFFECT");
-                    System.out.println(scriptContent);
-                }
-                if (scriptHead.compareTo("option") == 0) {
-                    System.out.println("OPTIONS");
-                    System.out.println(scriptContent);
-                }
-                if (scriptHead.compareTo("skip") == 0) {
-                    System.out.println("SKIP");
-                    System.out.println(scriptContent);
-                }
-                if (scriptHead.compareTo("pause") == 0) {
-                    System.out.println("PAUSE");
-                    System.out.println(scriptContent);
-                }
-                if (scriptHead.compareTo("end") == 0) {
-                    System.out.println("END");
-                    System.out.println(scriptContent);
-                }
+/**
+ *
+ * @author Yang
+ */
 
+public class GameController {
+    private String scriptFileName;
+    private String scriptLine = null;
+    private String scriptHead = null;
+    private String scriptContent = null;
+    
+    private int beginIdx;
+    private int endIdx;
+    private int skipBuf;
+    
+    Text gameText = new Text();
+    
+    public void openGame(String fileName) {
+        scriptFileName = fileName;
+    }
+    
+    public int runGame() {
+        if (scriptFileName == null) {
+            return 0;
+        } else {
+            try {
+                FileReader fileReader = new FileReader(scriptFileName);
+                BufferedReader bufferedReader = new BufferedReader(fileReader);
+                while((scriptLine = bufferedReader.readLine()) != null) {
+                    beginIdx = scriptLine.indexOf("{");
+                    endIdx = scriptLine.indexOf("}");
+                    scriptHead = scriptLine.substring(0, beginIdx);
+                    scriptContent = scriptLine.substring(beginIdx + 1, endIdx);
+                
+                    if (scriptHead.compareTo("music") == 0) {
+                        System.out.println("MUSIC");
+                        System.out.println(scriptContent);
+                    }
+                    if (scriptHead.compareTo("text") == 0) {
+                        System.out.println("TEXT");
+                        gameText.displayText(0, scriptContent);
+                    }
+                    if (scriptHead.compareTo("image") == 0) {
+                        System.out.println("IMAGE");
+                        System.out.println(scriptContent);
+                    }
+                    if (scriptHead.compareTo("background") == 0) {
+                        System.out.println("BACKGROUND");
+                        System.out.println(scriptContent);
+                    }
+                    if (scriptHead.compareTo("fx") == 0) {
+                        System.out.println("EFFECT");
+                        System.out.println(scriptContent);
+                    }
+                    if (scriptHead.compareTo("option") == 0) {
+                        System.out.println("OPTIONS");
+                        skipBuf = gameText.displayText(1, scriptContent);
+                        for (int i = 0; i < skipBuf; i++) {
+                            bufferedReader.readLine();
+                        }
+                    }
+                    if (scriptHead.compareTo("skip") == 0) {
+                        System.out.println("SKIP");
+                        for (int i = 0; i < Integer.parseInt(scriptContent); i++) {
+                            bufferedReader.readLine();
+                        }
+                    }
+                    if (scriptHead.compareTo("pause") == 0) {
+                        System.out.println("PAUSE");
+                        System.out.println(scriptContent);
+                    }
+                    if (scriptHead.compareTo("end") == 0) {
+                        System.out.println("END");
+                        System.out.println(scriptContent);
+                    }
+                }
+                bufferedReader.close(); // close file reader
             }
-            bufferedReader.close(); // close file reader
+            catch(FileNotFoundException ex) {
+                System.out.println("UNABLE TO OPEN GAME '" + scriptFileName + "'");                
+            }
+            catch(IOException ex) {
+                System.out.println("ERROR READING FILE '" + scriptFileName + "'");                  
+            }  
         }
-        catch(FileNotFoundException ex) {
-            System.out.println(
-                "Unable to open file '" + scriptFileName + "'");                
-        }
-        catch(IOException ex) {
-            System.out.println(
-                "Error reading file '" + scriptFileName + "'");                  
-        }     
+        return 1;
     }
 }
