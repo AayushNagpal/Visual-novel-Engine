@@ -1,0 +1,33 @@
+image{1.jpg}
+music{bgm.mp3}
+text{Bosco had offered me the tip as a form of apology.}
+text{The fat old spacer had almost gotten me killed several times with his liberal distribution of so-called ¡®exclusive¡¯ information.}
+text{I had informed him of my displeasure by threatening bodily harm on his fat, drunk person.}
+text{But before I could act out on my impulses,}
+text{he promised me a job,}
+text{one that would pay more than triple of what I usually made.}
+text{There is this small outpost, }
+text{some 400 light years from here,}
+image{2.jpg}
+text{he said, a smug smile spreading on his porcine face.}
+text{The Robigo Mines.}
+text{I know someone there.}
+text{If you are up for some long range smuggling,}
+text{then you are in for the biggest pay check of your life.}
+option{TAKE THE OFFER(0); REFUSE(10);}
+text{He had my attention.}
+text{He knew I had just procured an Asp, }
+text{that I was desperate to upgrade it}
+text{that I was out of credits.}
+text{I could not turn down an opportunity like this one. }
+text{Supressing a belch that seemed to emanate all the way from the gravity well of his immense stomach}
+text{he continued}
+text{You will be contrabanding s...}
+text{to be continued...}
+skip{5}
+text{You refused the offer}
+text{I don't know what to say}
+text{I did not write this novel so if you reject your offer.}
+text{I really don't know what would happen}
+text{so why don't you go back and choose again?}
+end{}
