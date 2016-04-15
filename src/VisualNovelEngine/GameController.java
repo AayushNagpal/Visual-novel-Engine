@@ -22,8 +22,10 @@ public class GameController {
     private int beginIdx;
     private int endIdx;
     private int skipBuf;
-    
+    private int count = 0;
+	
     Text gameText = new Text();
+	Image image = new Image();
     
     public void openGame(String fileName) {
         scriptFileName = fileName;
@@ -52,6 +54,12 @@ public class GameController {
                     }
                     if (scriptHead.compareTo("image") == 0) {
                         System.out.println("IMAGE");
+						++count;
+						if(count == 1){
+							image.displayImage(scriptContent);
+						}else{
+							image.changeImage(scriptContent);
+						}
                         System.out.println(scriptContent);
                     }
                     if (scriptHead.compareTo("background") == 0) {

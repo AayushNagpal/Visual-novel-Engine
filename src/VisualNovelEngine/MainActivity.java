@@ -25,6 +25,11 @@ protected void onCreate(Bundle savedInstanceState) {
 	// TODO Auto-generated method stub
 	super.onCreate(savedInstanceState);
 	setContentView(R.layout.activity_main);
+	
+	// Integrating Game control class
+	GameController gc = new GameController();
+	gc.openGame();
+	gc.runGame();
 }
 
 @Override
