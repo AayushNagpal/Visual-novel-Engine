@@ -1,4 +1,3 @@
-
 package com.csci5210.se.visualnovelengine;
 
 import java.io.InputStream;
