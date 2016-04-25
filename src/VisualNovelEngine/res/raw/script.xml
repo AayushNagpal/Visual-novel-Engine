@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dialogues>
+
+    <!-- First of all we set a background image -->
+    <dialogue event="setBackgroundImage" resource="city" />
+
+    <!-- Then we set a background music -->
+    <dialogue event="playSound" resource="fur_ambrogia" loop="true" />
+
+    <!-- A simple dialogue. "Ambrogia" is the speaker's name and "girl" is his image.
+    	 Since it's the first time she appears, we gives her a fadeInWithText effect (character and textbox).  -->
+    <dialogue name="K_Chawla" character="girl" animation="fadeInWithText">Hi Aayush!</dialogue>
+    <dialogue name="K_Chawla" character="girl">Seems we have a job to do</dialogue>
+
+    <!-- A dialogue for input request. The input will be saved in the "name" variable -->
+    <dialogue name="name"     mode="input">What day it is?</dialogue>
+
+    <!-- To print a variable, just write between two # -->
+    <dialogue name="K_Chawla" character="girl">Oh, its #name#!</dialogue>
+
+    <!-- A dialogue for choice request. The choice ("good" or "bad") will be saved in the "feel" variable -->
+    <dialogue name="K_Chawla" character="girl">How do you feel in space?</dialogue>
+    <dialogue name="feel"     mode="choice" choices="good|bad">Good | Bad</dialogue>
+
+    <!-- An "if" statement. If #feel# is equals to "good" than print the next dialogue, otherwise it will be skipped -->
+    <dialogue if="#feel# == 'good'" />
+       	<dialogue name="K_Chawla" character="girl">Oh, #feel# :D</dialogue>
+
+    <dialogue if="#feel# == 'bad'" />
+        <dialogue name="K_Chawla" character="girl">Oh, I'm sorry :(</dialogue>
+
+    <dialogue name="K_Chawla" character="girl">Are you a ready for the long journey ahead, or not?</dialogue>
+    <dialogue name="gender"   mode="choice" choices="boy|girl">Ready | NotReady</dialogue>
+
+    <!-- You can too do if chains. Remember to set chained="true" to each if node -->
+    <dialogue if="#gender# == 'boy'" />
+    	<dialogue if="#feel# == 'good'" chained="true" />
+        	<dialogue name="K_Chawla" character="girl3">Great!! Lets start the Journey :D</dialogue>
+
+    <dialogue if="#gender# == 'boy'" />
+    	 <!-- != Let's try the "not equals" operator -->
+    	<dialogue if="#feel# != 'good'" chained="true" />
+    		<dialogue name="K_Chawla" character="girl2">Oh ok, Let me know when you feel good to start.</dialogue>
+
+    <dialogue if="#gender# == 'girl'" />
+        <dialogue name="K_Chawla" character="girl">Ah, seems you are not interested in space journey</dialogue>
+
+    <dialogue name="K_Chawla" character="girl" animation="fadeOutWithText">Thanks for reading visual novel!</dialogue>
+
+    <!--  We can stop the background music too, obviously -->
+    <dialogue event="stopSound" resource="fur_ambrogia" />
+
+    <!-- Script is finished. Now will be loaded sequel.xml and the game will be saved. -->
+    <!-- dialogue goTo="sequel" /-->
+
+</dialogues>

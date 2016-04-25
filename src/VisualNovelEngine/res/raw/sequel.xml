@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dialogues>
+
+    <dialogue event="setBackgroundImage" resource="city" />
+
+    <dialogue event="playSound" resource="fur_ambrogia" loop="true" />
+
+    <dialogue name="Ambrogia" character="girl" animation="fadeInWithText">#name#, I'm glad to see you again.</dialogue>
+    <dialogue name="Ambrogia" character="girl">Thanks to have played this demo.</dialogue>
+    <dialogue name="Ambrogia" character="girl" animation="fadeOutWithText">Farewell...</dialogue>
+
+    <dialogue event="stopSound" resource="fur_ambrogia" />
+
+</dialogues>

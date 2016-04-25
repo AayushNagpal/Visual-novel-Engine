@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- System -->
+    <string name="app_name">Visual Novel Engine</string>
+
+    <!-- Menu -->
+    <string name="home">Home</string>
+    <string name="next">Next</string>
+    <string name="mute">Mute</string>
+    <string name="unmute">Unmute</string>
+
+    <!-- Activities -->
+    <string name="title_activity_credits">Credits</string>
+    <string name="title_activity_chapter1">Visual Novel</string>
+    <string name="character_image">Character image</string>
+
+    <!-- Errors -->
+    <string name="error_saving_variable">Error saving variable</string>
+    <string name="error_saving_game">Error saving the game</string>
+    <string name="error_loading_game">Error loading the game</string>
+    <string name="error_playing_sound">Error playing a sound</string>
+    <string name="error_playing_music">Error playing the music</string>
+    <string name="error_stopping_sound">Error stopping a sound</string>
+    <string name="error_stopping_music">Error stopping the music</string>
+    <string name="error_reading_script">Error reading the script</string>
+    <string name="error_no_save_available">No saves available</string>
+    <string name="title_activity_chapters">Chapters</string>
+    <string name="action_settings">Settings</string>
+
+</resources>
