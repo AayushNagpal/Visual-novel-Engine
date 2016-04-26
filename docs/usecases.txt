@@ -41,21 +41,33 @@ Usecase 7 - Admin supports if there are any issues in the engine
 Description - Admin supports the Novel engine if any issue raises when the game is created by the developer.
 Users Involved - Admin
 
+Usecase 8 - Admin should create an engine which should support with only text script created
+Description - Admin should create an customized engine which will take the input of script which consists only text.
+Users Involved - Admin
+
+Usecase 9 - Admin should create an engine which should support with images script 
+Description - Admin should create an customized engine which will take the input of script which consists only image files.
+Users Involved - Admin
+
+Usecase 10 - Admin should create an engine which should support with audios script 
+Description - Admin should create an customized engine which will take the input of script which consists only audio files.
+Users Involved - Admin
+
 
 Alternate scenarios
 
-Usecase 8 - Incorrect input to the Novel engine
+Usecase 11 - Incorrect input to the Novel engine
 Description - Creator passes incorrect input to the engine.
 Users Involved - Creator & Admin
 
-Usecase 9 - Wrong Syntax passed as an input
+Usecase 12 - Wrong Syntax passed as an input
 Description - Creator passes wrong syntax which is not supported by the visual novel engine.
 Users Involved - Creator & Admin
 
-Usecase 10 - Issue with the Visual Novel created
+Usecase 13 - Issue with the Visual Novel created
 Description - Incorrect behaviour of the visual novel which is created by the User.
 Users Involved - Creator
 
-Usecase 11 - Issue with the Visual Novel created as wrong flow of novel
+Usecase 14 - Issue with the Visual Novel created as wrong flow of novel
 Description - Incorrect behaviour of the visual novel which is created by the User.
 Users Involved - Creator
