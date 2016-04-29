@@ -1,7 +1,7 @@
 Visual Novel Engine -
 
 This engine is used to create Visual Novels which can be used by the mid-term users to create the novels and 
-the final user reads the visual novel game.
+the final user reads the visual novel.
 
 Three actors - Admin, Creator, Player
 
@@ -15,17 +15,17 @@ Users Involved - Creator
 
 Usecase 2 - Creating the Visual Novel with only text
 Description - User should pass proper inputs such as (text document, images for background and audio files if any neccesary) to the Visual Novel
-	      Engine. Engine will interpret the input provided and generates the output game file.
+	      Engine. Engine will interpret the input provided and generates the output apk file.
 Users Involved - Creator
 
 Usecase 3 - Creating the Visual Novel with only text and background images
 Description - User should pass proper inputs such as (text document, images for background) to the Visual Novel
-	      Engine. Engine will interpret the input provided and generates the output game file.
+	      Engine. Engine will interpret the input provided and generates the output apk file.
 Users Involved - Creator
 
 Usecase 4 - Creating the Visual Novel which includes text, background images and audio files
 Description - User should pass proper inputs such as (text document, images for background and audio files if any neccesary) to the Visual Novel
-	      Engine. Engine will interpret the input provided and generates the output game file.
+	      Engine. Engine will interpret the input provided and generates the output apk file.
 Users Involved - Creator
 
 Usecase 5 - Reading the Visual Novel
@@ -38,7 +38,7 @@ Description - Developer creates a engine which takes input from the creator and 
 Users Involved - Admin
 
 Usecase 7 - Admin supports if there are any issues in the engine
-Description - Admin supports the Novel engine if any issue raises when the game is created by the developer.
+Description - Admin supports the Novel engine if any issue raises when the novel is created by the developer.
 Users Involved - Admin
 
 Usecase 8 - Admin should create an engine which should support with only text script created
